@@ -1,0 +1,44 @@
+.social-net {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+        padding-right: 10px;
+    }
+}
+
+
+.social-net__link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+
+    color: $icon-color;
+
+    transition: color 250ms $timing-function,
+        background-color 250ms $timing-function;
+
+    &:hover, &:focus {
+        color: $white-color;
+        background-color: $accent-color;
+    }
+}
+
+.social-net__icon {
+    height: 20px;
+    width: 20px;
+
+    fill: currentColor;
+}
+
+.social-net__link--footer {
+    color: $white-color;
+    background-color: $icon-background-color;
+
+    transition: background-color 250ms $timing-function;
+
+    &:hover,&:focus {
+        background-color: $accent-color;
+    }
+}
+

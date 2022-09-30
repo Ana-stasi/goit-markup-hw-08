@@ -1,0 +1,38 @@
+.footer {
+    padding: 60px 0;
+    background-color: $secondary-background-color;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-nav {
+    margin-right: 70px;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-nav__address {
+    margin-top: 0;
+    margin-bottom: 9px;
+
+    color: $white-color;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.footer__join-text {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    color: $white-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}

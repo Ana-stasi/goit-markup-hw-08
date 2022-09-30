@@ -1,0 +1,30 @@
+.send-button__container {
+    display: flex;
+    justify-content: center;
+}
+
+.send-button {
+    cursor: pointer;
+    padding: 10px 52px;
+    min-width: 96px;
+    text-align: center;
+    border-radius: 4px;
+    border: transparent;
+
+    font-family: $font-roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 250ms $timing-function;
+
+    &:hover,&:focus {
+        background-color: $active-accent-color;
+    }
+}
+
