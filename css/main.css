@@ -427,6 +427,15 @@ textarea {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/studio/hero-img.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero-img.jpg);
   background-color: #2F303A;
@@ -652,6 +661,12 @@ textarea {
 
 @media screen and (max-width: 1199px) {
   .work {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .work__title {
     display: none;
   }
 }

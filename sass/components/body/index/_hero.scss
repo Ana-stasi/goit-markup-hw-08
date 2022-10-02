@@ -5,6 +5,10 @@
     margin-left: auto;
     margin-right: auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-image: linear-gradient(to right, $hero-color, $hero-color),
         url(../images/studio/hero-img.jpg);
     background-color: $secondary-background-color;
@@ -64,12 +68,14 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
-    @media  screen and (min-width:1200px) {
+    
+    @media screen and (min-width: $desktop) {
         width: 696px;
         font-size: 44px;
-        line-height: 1.36; 
+        line-height: 1.36;
     }
+
+
 }
 
 .hero__button {
