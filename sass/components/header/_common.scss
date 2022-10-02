@@ -1,17 +1,115 @@
 .header {
+    position: relative;
     border-bottom: 1px solid $header-border-color;
+    
 }
 
 .header-container {
     display: flex;
+    align-items: center;
+  
+    @media screen and (max-width: 767px) {
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: space-between;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
 }
 
 .header__nav {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width:$tablet){
+        display: flex;
+        align-items: center;
+    }
+   
 }
 
 .header__contacts {
-    display: flex;
-    margin-left: auto;
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-left: auto;
+        padding-top: 21px;
+        padding-bottom: 21px;
+
+    }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+}
+
+.menu-container{
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        background-color: $white-color;
+    
+        flex-direction: column;
+
+        &.is-open{
+            display: block;
+             
+        }
+    }
+    @media screen and (min-width: $tablet) and(max-width: 1199px) {
+        display: flex;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.header-social-net {
+    display: inline-flex;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.header-social-net__item {
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &:not(:first-child) {
+        padding-left: 10px;
+    }
+}
+
+.header-social-net__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+   
+    text-decoration: none;
+    color: $accent-color;
+
+    @media screen and (max-width: 479px) {
+        font-size: 3.5vw;
+    }
 }

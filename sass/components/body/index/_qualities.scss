@@ -1,14 +1,35 @@
 .qualities {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width:$tablet)  {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
+        margin: -15px;
+    }
 }
 
 .qualities__item {
-    width: 270px;
-    margin-right: 30px;
+    
+    @media screen and (max-width:767px){
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 
-    &:last-child {
-        margin-right: 0;
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
+       width: calc((100% - 4*15px)/2);
+       margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+        margin-right: 30px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -37,6 +58,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width:767px) {
+        text-align: center;
+    }
 }
 
 .qualities__text {

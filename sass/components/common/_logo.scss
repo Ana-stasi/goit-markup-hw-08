@@ -1,5 +1,4 @@
 .logo {
-    margin-right: 93px;
 
     color: $accent-color;
 
@@ -16,4 +15,17 @@
     &__footer--accent {
         color: $white-color;
     }
+
 }
+
+.logo_header{
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
+}
+
+

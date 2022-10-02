@@ -9,6 +9,7 @@ html {
 }
 
 body {
+
     color: $primary-text-color;
 
     font-family: $font-roboto;;
@@ -17,6 +18,8 @@ body {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 textarea {
@@ -31,8 +34,22 @@ textarea {
 }
 
 .container {
-    margin: 0 auto;
+   
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 767px){
+        width: $mobile;
+    }
+
+    @media screen and (min-width:$tablet) {
+        width: $tablet;
+        
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: $desktop;
+    }
 }

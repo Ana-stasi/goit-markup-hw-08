@@ -2,6 +2,7 @@
 <html lang="ua">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
@@ -19,44 +20,101 @@
     <!-- Header  -->
     <header class="header">
       <div class="container header-container">
-        <nav class="header__nav">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo_header logo__header--accent">Studio</span></a
-          >
-          <ul class="site-nav list">
-            <li class="site-nav__item">
+        <a href="./index.html" class="logo logo__header"
+          >Web<span class="logo_header logo__header--accent">Studio</span></a
+        >
+        <button
+          type="button"
+          class="menu-button"
+          aria-label="Mobile menu button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use
+              href="./images/icons.svg#menu"
+              class="menu-button__icon menu-button__icon--menu"
+            ></use>
+            <use
+              href="./images/icons.svg#close"
+              class="menu-button__icon menu-button__icon--cross"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header__nav">
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a
+                  href="./index.html"
+                  class="site-nav__link site-nav__link--current"
+                  >Студія</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts header__contacts list">
+            <li class="contacts__item contacts__item--header">
               <a
-                href="./index.html"
-                class="site-nav__link site-nav__link--current"
-                >Студія</a
+                href="mailto:info@devstudio.com"
+                class="contacts__link contacts__link--header contacts__link--mail"
               >
+                <svg class="contacts__icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакти</a>
+            <li class="contacts__item contacts__item--header  ">
+              <a
+                href="tel:+380961111111"
+                class="contacts__link contacts__link--header contacts__link--phone"
+              >
+                <svg class="contacts__icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts header__contacts list">
-          <li class="contacts__item contacts__item--header">
-            <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--header">
-              <svg class="contacts__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item contacts__item--header">
-            <a href="tel:+380961111111" class="contacts__link contacts__link--header">
-              <svg class="contacts__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="header-social-net list">
+            <li class="header-social-net__item">
+              <a
+                class="header-social-net__link"
+                href="https://www.instagram.com/?hl=ru"
+                >Instagram
+              </a>
+            </li>
+            <li class="header-social-net__item">
+              <a
+                class="header-social-net__link"
+                href="https://twitter.com/home"
+                >Twitter
+              </a>
+            </li>
+            <li class="header-social-net__item">
+              <a
+                class="header-social-net__link"
+                href="https://uk-ua.facebook.com/"
+                >Facebook
+              </a>
+            </li>
+            <li class="header-social-net__item">
+              <a
+                class="header-social-net__link"
+                href="https://ua.linkedin.com/"
+                >LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- Main content -->
@@ -168,10 +226,9 @@
           <ul class="team list">
             <li class="team__item">
               <img
+              srcset="./images/studio/igor.jpg 1x, ./images/studio/igor2.jpg 2x"
                 src="./images/studio/igor.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
                 class="team__photo"
               />
               <h3 class="team__member">Ігор Дем'яненко</h3>
@@ -205,10 +262,9 @@
             </li>
             <li class="team__item">
               <img
+              srcset="./images/studio/olha.jpg 1x, ./images/studio/olha2.jpg 2x"
                 src="./images/studio/olha.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
-                height="260"
                 class="team__photo"
               />
               <h3 class="team__member">Ольга Рєпіна</h3>
@@ -242,10 +298,9 @@
             </li>
             <li class="team__item">
               <img
+              srcset="./images/studio/kolia.jpg 1x, ./images/studio/kolia2.jpg 2x"
                 src="./images/studio/kolia.jpg"
                 alt="Микола Тарасов"
-                width="270"
-                height="260"
                 class="team__photo"
               />
               <h3 class="team__member">Микола Тарасов</h3>
@@ -279,10 +334,9 @@
             </li>
             <li class="team__item">
               <img
+              srcset="./images/studio/misha.jpg 1x, ./images/studio/misha2.jpg 2x"
                 src="./images/studio/misha.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
-                height="260"
                 class="team__photo"
               />
               <h3 class="team__member">Михайло Єрмаков</h3>
@@ -437,55 +491,66 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-container">
-          <div class="footer-nav">
-            <a href="./index.html" class="logo footer__logo"
-              >Web<span class="logo__footer--accent">Studio</span></a
-            >
-            <address>
-              <p class="footer-nav__address">м. Київ, пр-т Лесі Українки, 26</p>
-              <ul class="contacts list">
-                <li class="contacts__item contacts__item--footer">
-                  <a href="mailto:info@example.com" class="contacts__link contacts__link--footer">
-                    info@example.com
-                  </a>
+          <div class="footer-wrapper">
+            <div class="footer-nav">
+              <a href="./index.html" class="logo footer__logo"
+                >Web<span class="logo__footer--accent">Studio</span></a
+              >
+              <address>
+                <p class="footer-nav__address">
+                  м. Київ, пр-т Лесі Українки, 26
+                </p>
+                <ul class="contacts footer__contacts list">
+                  <li class="contacts__item contacts__item--footer">
+                    <a
+                      href="mailto:info@example.com"
+                      class="contacts__link contacts__link--footer"
+                    >
+                      info@example.com
+                    </a>
+                  </li>
+                  <li class="contacts__item contacts__item--footer">
+                    <a
+                      href="tel:+380991111111"
+                      class="contacts__link contacts__link--footer"
+                    >
+                      +38 099 111 11 11
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer__social-net-container">
+              <p class="footer__join-text">приєднуйтесь</p>
+              <ul class="social-net list">
+                <li class="social-net__item">
+                  <a href="" class="social-net__link social-net__link--footer">
+                    <svg class="social-net__icon">
+                      <use href="./images/icons.svg#instagram"></use></svg
+                  ></a>
                 </li>
-                <li class="contacts__item contacts__item--footer">
-                  <a href="tel:+380991111111" class="contacts__link contacts__link--footer">
-                    +38 099 111 11 11
-                  </a>
+                <li class="social-net__item">
+                  <a href="" class="social-net__link social-net__link--footer"
+                    ><svg class="social-net__icon">
+                      <use href="./images/icons.svg#twitter"></use></svg
+                  ></a>
+                </li>
+                <li class="social-net__item">
+                  <a href="" class="social-net__link social-net__link--footer"
+                    ><svg class="social-net__icon">
+                      <use href="./images/icons.svg#facebook"></use></svg
+                  ></a>
+                </li>
+                <li class="social-net__item">
+                  <a href="" class="social-net__link social-net__link--footer"
+                    ><svg class="social-net__icon">
+                      <use href="./images/icons.svg#linkedin"></use></svg
+                  ></a>
                 </li>
               </ul>
-            </address>
+            </div>
           </div>
-          <div class="footer__social-net-container">
-            <p class="footer__join-text">приєднуйтесь</p>
-            <ul class="social-net list">
-              <li class="social-net__item">
-                <a href="" class="social-net__link social-net__link--footer">
-                  <svg class="social-net__icon">
-                    <use href="./images/icons.svg#instagram"></use></svg
-                ></a>
-              </li>
-              <li class="social-net__item">
-                <a href="" class="social-net__link social-net__link--footer"
-                  ><svg class="social-net__icon">
-                    <use href="./images/icons.svg#twitter"></use></svg
-                ></a>
-              </li>
-              <li class="social-net__item">
-                <a href="" class="social-net__link social-net__link--footer"
-                  ><svg class="social-net__icon">
-                    <use href="./images/icons.svg#facebook"></use></svg
-                ></a>
-              </li>
-              <li class="social-net__item">
-                <a href="" class="social-net__link social-net__link--footer"
-                  ><svg class="social-net__icon">
-                    <use href="./images/icons.svg#linkedin"></use></svg
-                ></a>
-              </li>
-            </ul>
-          </div>
+
           <form class="subscribe-form">
             <p class="subscribe-form__title">Підпишіться на розсилку</p>
             <div class="subscribe-form__wrapper">
@@ -502,5 +567,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

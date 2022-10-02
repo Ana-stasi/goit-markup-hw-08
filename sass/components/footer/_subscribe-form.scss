@@ -1,28 +1,50 @@
 .subscribe-form {
-    width: 570px;
-    margin-left: auto;
 
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 93px;
+    }
 }
 
 .subscribe-form__title {
-    margin-top: 12px;
+    margin-top: 0;
     margin-bottom: 20px;
-
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 
     color: $white-color;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-top: 12px;
+    }
 }
 
 .subscribe-form__wrapper {
-    display: flex;
-    justify-content: center;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .subscribe-form input {
-    width: 358px;
+    height: 50px;
     padding: 15px 16px;
     border-radius: 4px;
 
@@ -30,6 +52,20 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: border-color 250ms $timing-function,
         color 250ms $timing-function;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        width: 360px;
+    }
 
     &::placeholder {
     
