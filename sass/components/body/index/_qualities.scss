@@ -1,3 +1,16 @@
+.section__qualities{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    
+    @media screen and (min-width: 481px) {
+        padding-bottom: 60px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 0;
+    }
+}
 .qualities {
     display: flex;
     flex-wrap: wrap;

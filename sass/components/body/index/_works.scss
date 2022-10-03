@@ -1,15 +1,11 @@
-.work {
-    display: flex;
-
-    @media  screen and (max-width:1199px) {
+.section__work{
+    @media screen and (max-width:1199px) {
         display: none;
     }
 }
 
-.work__title{
-    @media screen and (max-width:1199px) {
-        display: none;
-    }
+.work {
+    display: flex;   
 }
 
 .work__item {

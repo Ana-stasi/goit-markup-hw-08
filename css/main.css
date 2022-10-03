@@ -574,6 +574,24 @@ textarea {
   display: none;
 }
 
+.section__qualities {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 481px) {
+  .section__qualities {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__qualities {
+    padding-top: 94px;
+    padding-bottom: 0;
+  }
+}
+
 .qualities {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -671,22 +689,16 @@ textarea {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .section__work {
+    display: none;
+  }
+}
+
 .work {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media screen and (max-width: 1199px) {
-  .work {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .work__title {
-    display: none;
-  }
 }
 
 .work__item {
