@@ -16,6 +16,11 @@
     background-position: center;
     background-size: cover;
 
+    @media screen and (max-width: 767px) {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -69,7 +74,7 @@
     text-transform: uppercase;
     
     @media screen and (min-width: $desktop) {
-        width: 696px;
+        // width: 696px;
         font-size: 44px;
         line-height: 1.36;
     }
