@@ -19,9 +19,11 @@
 }
 
 .header__nav {
-    @media screen and (min-width:$tablet){
-        display: flex;
-        align-items: center;
+    display: flex;
+    
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        margin-bottom: auto;
     }
    
 }
@@ -35,8 +37,8 @@
     
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
         margin-left: auto;
-        padding-top: 21px;
-        padding-bottom: 21px;
+        padding-top: 19px;
+        padding-bottom: 19px;
 
     }
     
@@ -50,7 +52,7 @@
 .menu-container{
     @media screen and (max-width: 767px) {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0%;
         width: 100vw;
@@ -66,7 +68,9 @@
         flex-direction: column;
 
         &.is-open{
-            display: block;
+            display: flex;
+            flex-direction: column;
+           
              
         }
     }
